@@ -4,7 +4,7 @@
     <p><%= pluralize(@user.errors.count, "errors") %> prohibited this object from being saved: not successfully</p>
     <hr>
     <p class="mb-0">
-      <%= @user.errors.full_messages.each do |massage| %>
+      <% @user.errors.full_messages.each do |massage| %>
         <li><%= massage %></li>
       <% end %>
     </p>
