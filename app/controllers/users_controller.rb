@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  
+  bfore_action :authenticate_user!
+  
   def show
   end
   
