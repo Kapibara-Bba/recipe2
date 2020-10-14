@@ -8,4 +8,8 @@ class User < ApplicationRecord
   has_many :recipes, dependent: :destroy
   has_many :favorites, dependent: :destroy
   
+  def alerady_favorited?(recipe)
+    self.favorites.exists?(recipe_id: recipe.id)
+  end
+  
 end
